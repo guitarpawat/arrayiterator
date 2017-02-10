@@ -42,7 +42,12 @@ public class ArrayIterator<T> implements Iterator<T> {
      * @return true if it has else return false.
      */
     public boolean hasNext(){
-        return cursor != arrayLength-1;
+        boolean notNull = false;
+        for(int i=cursor+1;i<arrayLength;i++){
+            if(array[i]!=null)
+                notNull = true;
+        }
+        return cursor != arrayLength-1 && notNull;
     }
     /**
      * Remove most recent array element and set it to null.

@@ -15,8 +15,6 @@ public class Main {
         for(int i=0;i<length;i++){
             System.out.print("array["+i+"] : ");
             array[i] = in.nextLine();
-            if(array[i].equals("null"))
-                array[i] = null;
         }
         char choice = '\0';
         ArrayIterator test = new ArrayIterator(array);
@@ -37,7 +35,6 @@ public class Main {
                     break;
                 case 'n': case 'N':
                     System.out.println("Current : "+test.next());
-                    System.out.println("hasNext : "+test.hasNext());
                     break;
                 case 'r': case 'R':
                     test.remove();
